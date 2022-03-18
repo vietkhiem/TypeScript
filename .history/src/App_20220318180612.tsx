@@ -1,3 +1,4 @@
+import { type } from '@testing-library/user-event/dist/type';
 import React, {useState} from 'react';
 import './App.css';
 import Login from './pages/login';
@@ -35,7 +36,7 @@ function App() {
         <button onClick={() => setShowTable(!isShowTable)}>
         {isShowTable === true ? 'Ẩn' : 'Hiện'}  table</button>
 
-        <button>Add Students</button>
+        <button onClick={() => setStudent()}>Add Students</button>
       {/* thêm view login vào trong App.tsx */}
         <Login />
         {/* thêm components table vào app */}

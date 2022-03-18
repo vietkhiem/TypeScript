@@ -3,12 +3,6 @@ import './App.css';
 import Login from './pages/login';
 import TableCustom from './pages/table';
 
-type Student = {
-  name: string,
-  age: number,
-  address: string,
-  phone: number
-}
 
 function App() {
   const [count, setCount] = useState<number>(0);
@@ -21,6 +15,20 @@ function App() {
       age: 21,
       address: 'Thái Bình',
       email: 'Vietkhiemdz@gmail.com',
+      action: 'Delete'
+    },
+    {
+      name: 'vietkhiem12',
+      age: 22,
+      address: 'Hà Nội',
+      email: 'Vietkhiemdzz@gmail.com',
+      action: 'Delete'
+    },
+    {
+      name: 'LinhLynnn',
+      age: 21,
+      address: 'Thái Bình',
+      email: 'Vietkhiemdzzz@gmail.com',
       action: 'Delete'
     }
   ]
