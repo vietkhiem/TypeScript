@@ -78,6 +78,14 @@ const Student = () => {
               type="email"
             />
           </div>
+          <div className="mt-4">
+            <label htmlFor="">Avatar</label>
+            <input
+              onChange={(e) => setavatar(e.target.value)}
+              className="border border-2 border-black"
+              type="text"
+            />
+          </div>
           <button
             onClick={(e) => {
               onSubmit()
@@ -90,7 +98,7 @@ const Student = () => {
         </form>
         <br />
         <br />
-        <p>Tuổi : {showAge({ age: 21 })}</p>
+        <p>Tuổi : {showAge({ age: 20 })}</p>
       </div>
     </>
   )

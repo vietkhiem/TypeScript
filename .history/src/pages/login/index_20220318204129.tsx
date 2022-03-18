@@ -90,7 +90,7 @@ const Student = () => {
         </form>
         <br />
         <br />
-        <p>Tuổi : {showAge({ age: 21 })}</p>
+        <p>Tuổi : {showAge({ age: 20 })}</p>
       </div>
     </>
   )
