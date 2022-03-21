@@ -7,11 +7,10 @@ import Product from './pages/product/Product';
 import AdminLayout from './pages/layouts/AdminLayout';
 import AdminHomePage from './pages/adminHomePage';
 import HomePage from './pages/homepage';
-import ProductForm from './pages/product/ProductForm';
-import ProductDetail from './pages/product/ProductDetail';
 
 import {Routes, Route, BrowserRouter, Link} from 'react-router-dom';
-
+import ProductForm from './pages/product/ProductForm';
+import ProductDetail from './pages/product/ProductDetail';
 
 type Student = {
   name: string,
@@ -58,16 +57,16 @@ function App() {
         <div>
             <div>
               <ul>
-                <li><Link to={'/'}>Home</Link></li>
-                <li><Link to={'/product'}>Product</Link></li>
-                <li><Link to={"/admin"}>Admin Home</Link></li>
-                <li><Link to={"/admin/product"}>Admin Product</Link></li>
+                <li></li>
+                <li></li>
+                <li></li>
               </ul>
             </div>
         </div>
 
 
       {/* cau hinh route */}
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<ClientLayout />}>
             <Route index element={<HomePage />} />
@@ -85,6 +84,7 @@ function App() {
           </Route>
 
         </Routes>
+      </BrowserRouter>
     </div>
   );
 }

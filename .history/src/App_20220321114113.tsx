@@ -59,7 +59,7 @@ function App() {
             <div>
               <ul>
                 <li><Link to={'/'}>Home</Link></li>
-                <li><Link to={'/product'}>Product</Link></li>
+                <li><Link to={'/product'}>Home</Link></li>
                 <li><Link to={"/admin"}>Admin Home</Link></li>
                 <li><Link to={"/admin/product"}>Admin Product</Link></li>
               </ul>

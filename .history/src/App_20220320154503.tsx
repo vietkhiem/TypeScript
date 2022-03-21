@@ -59,15 +59,15 @@ function App() {
             <div>
               <ul>
                 <li><Link to={'/'}>Home</Link></li>
-                <li><Link to={'/product'}>Product</Link></li>
-                <li><Link to={"/admin"}>Admin Home</Link></li>
-                <li><Link to={"/admin/product"}>Admin Product</Link></li>
+                <li><Link to={'/product'}>Home</Link></li>
+                <li></li>
               </ul>
             </div>
         </div>
 
 
       {/* cau hinh route */}
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<ClientLayout />}>
             <Route index element={<HomePage />} />
@@ -85,6 +85,7 @@ function App() {
           </Route>
 
         </Routes>
+      </BrowserRouter>
     </div>
   );
 }

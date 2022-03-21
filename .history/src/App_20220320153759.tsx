@@ -7,11 +7,9 @@ import Product from './pages/product/Product';
 import AdminLayout from './pages/layouts/AdminLayout';
 import AdminHomePage from './pages/adminHomePage';
 import HomePage from './pages/homepage';
-import ProductForm from './pages/product/ProductForm';
-import ProductDetail from './pages/product/ProductDetail';
 
 import {Routes, Route, BrowserRouter, Link} from 'react-router-dom';
-
+import ProductForm from './pages/product/ProductForm';
 
 type Student = {
   name: string,
@@ -36,38 +34,21 @@ function App() {
   ]
   return (
     <div className="App">
-      <button onClick={() => setCount(count+1)}>Update Count</button>
-        <p>{count}</p>
-
-      <button onClick={() => setName('viet khiem')}>Update Name</button>
-        <p>Name: {name}</p>
-
-        <button onClick={() => setShowTable(!isShowTable)}>
-        {isShowTable === true ? 'Ẩn' : 'Hiện'}  table</button>
-
-        <button>Add Students</button>
-      {/* thêm view login vào trong App.tsx */}
-        <Login />
-        {/* thêm components table vào app */}
-        {
-          isShowTable === true
-        ? <TableCustom rows={studentsData} />
-        :null
-        }
+      
 
         <div>
             <div>
               <ul>
-                <li><Link to={'/'}>Home</Link></li>
-                <li><Link to={'/product'}>Product</Link></li>
-                <li><Link to={"/admin"}>Admin Home</Link></li>
-                <li><Link to={"/admin/product"}>Admin Product</Link></li>
+                <li></li>
+                <li></li>
+                <li></li>
               </ul>
             </div>
         </div>
 
 
       {/* cau hinh route */}
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<ClientLayout />}>
             <Route index element={<HomePage />} />
@@ -79,12 +60,13 @@ function App() {
 
             <Route path='product'>
               <Route index element={<Product />} />
-              <Route path=':id' element={<ProductDetail />} />
+              <Route path=':id' element={<ProductForm />} />
               <Route path=':id/edit' element={<ProductForm />} />
             </Route>
           </Route>
 
         </Routes>
+      </BrowserRouter>
     </div>
   );
 }
